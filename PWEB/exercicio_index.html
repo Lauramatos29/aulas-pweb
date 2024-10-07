@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Exercício</h1>
+    <p>Construa uma página simples que na sua caixa de alerta, mostra o nome
+        de um aluno, solicita as duas notas da N1, e no final mostra o nome do aluno
+        e a média da N1.
+    </p>
+
+    <script>
+        var nome=window.prompt("Digite o nome do aluno: ");
+        var nota1= Number.parseFloat (window.prompt("Digite a nota 1: "))
+        var nota2= Number.parseFloat (window.prompt("Digite a nota 2: "))
+        var media = (nota1*nota2)/2;
+        window.alert(`A média de ${nome} é: ${media}`)
+    </script>
+
+
+</body>
+</html>
