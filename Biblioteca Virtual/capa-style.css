@@ -1,0 +1,44 @@
+body{
+
+    .flex-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+    .center-flex {
+        width: 65%;
+        height: 400px;
+        background-color: cadetblue;
+        text-align: left;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .imagem-livro01{
+        width: 30%;
+    }
+
+    .container-texto{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        
+    }
+
+}
+
+button{
+    padding: 10px 20px;
+    background-color: darkcyan;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+
+}
