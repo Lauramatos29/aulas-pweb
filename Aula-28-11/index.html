@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Questão1:-->
+    
+    <h1>Calculo da sua idade:</h1>
+    <p>Digite o ano atual e o seu ano de nascimento</p>
+    
+    <!--Campo de entrada para colocar o ano atual-->
+    <input type="number" name="anoAtual" id="anoAtual"> -
+    <input type="number" name="anoNascimento" id="anoNascimento">
+    <!--Botão que quando clica chama a função idade-->
+    <input type="button" value="idade" onclick="idade()">
+    <div id = "res"> Sua idade atual é:</div>
+
+    <script>
+        function idade(){ // Não esquecer de colocar dentro da função
+            var anoAt = window.document.getElementById('anoAtual');
+            // tanto faz colocar o getElementById quanto o querySelector, ambos tem a mesma função.
+            var anoNasc = window.document.querySelector('input#anoNascimento');
+            // obtem a div onde o resulatdo será exibido
+            var res = window.document.getElementById('res');
+            var ano1 = Number(anoAt.value); // convertendo para número
+            var ano2 = Number(anoNasc.value);
+            var s = ano1-ano2;
+            res.innerHTML = `A sua idade atual é: ${s}`
+
+
+        }
+    </script>
+
+    <!--Questão2:-->
+
+    <h1>Calculo do valor dos livros</h1>
+    <p>Digite a quantidade de livros que você deseja comprar:</p>
+    <input type="number" name="quantidade" id="quantidade">
+    <input type="button" value="valor" onclick="valor()">
+    <div id="resultado"> O valor total é de: </div>
+
+    <script>
+        function valor(){ // nunca esquecer de colocar dentro do function
+            var num = window.document.getElementById('quantidade'); 
+            var result = window.document.getElementById('resultado');
+            var numero = Number(num.value); // transformando em numero, pois o JS não reconhece
+            var s = (numero*10); // fazendo o cálculo
+            result.innerHTML = `O valor total dos seus livros é de: ${s}`
+        }
+    </script>
+</body>
+</html>
