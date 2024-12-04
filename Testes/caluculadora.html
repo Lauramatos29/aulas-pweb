@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculadora:</h1>
+    <input type="number" id="n1" name="n1">
+    <input type="number" id="n2" name="n2">
+
+    <input type="button" value="Somar" onclick="somar()">
+    <input type="button" value="Subtrair" onclick="subtrair()">
+    <input type="button" value="Multiplicar" onclick="multiplicar()">
+    <input type="button" value="Dividir" onclick="dividir()">
+
+    <div id="res">Resutado:</div>
+
+    <script>
+        function somar(){
+            var num1 = window.document.getElementById('n1');
+            var num2 = window.document.getElementById('n2');
+            var res = window.document.getElementById('res');
+
+            var numero1 = Number(num1.value);
+            var numero2 = Number(num2.value);
+
+            var s = numero1+numero2;
+
+            res.innerText = `O resultado da soma entre ${numero1} e ${numero2} é: ${s}`
+        }
+
+        function subtrair(){
+            var num1 = window.document.getElementById('n1');
+            var num2 = window.document.getElementById('n2');
+            var res = window.document.getElementById('res');
+
+            var numero1 = Number(num1.value);
+            var numero2 = Number(num2.value);
+
+            var s = numero1-numero2;
+
+            res.innerText = `O resultado da subtração entre ${numero1} e ${numero2} é: ${s}`
+        }
+
+        function multiplicar(){
+            var num1 = window.document.getElementById('n1');
+            var num2 = window.document.getElementById('n2');
+            var res = window.document.getElementById('res');
+
+            var numero1 = Number(num1.value);
+            var numero2 = Number(num2.value);
+
+            var s = numero1*numero2;
+
+            res.innerText = `O resultado da multiplicação entre ${numero1} e ${numero2} é: ${s}`
+        }
+
+        function dividir(){
+            var num1 = window.document.getElementById('n1');
+            var num2 = window.document.getElementById('n2');
+            var res = window.document.getElementById('res');
+
+            var numero1 = Number(num1.value);
+            var numero2 = Number(num2.value);
+
+            var s = numero1/numero2;
+
+            res.innerText = `O resultado da divisão entre ${numero1} e ${numero2} é: ${s}`
+        }
+    </script>
+</body>
+</html>

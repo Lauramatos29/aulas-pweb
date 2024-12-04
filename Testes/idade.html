@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Descubra sua idade:</h1>
+    <p>Digite o ano atual e o seu ano de nascimento</p>
+    <input type="number" id="ano1" name="ano1"> - 
+    <input type="number" id="ano2" name="ano2">
+    <input type="button" value="Fazer calculo" onclick="idade()">
+    <div id="res">O resultado é:</div>
+
+    <script>
+       function idade(){
+        var a1 = window.document.getElementById('ano1');
+        var a2 = window.document.getElementById('ano2');
+        var res = window.document.getElementById('res');
+
+        var an1 = Number(a1.value);
+        var an2 = Number(a2.value);
+        var s = an1-an2;
+
+        res.innerText = `Você tem ${s} anos`
+       }
+    </script>
+</body>
+</html>
