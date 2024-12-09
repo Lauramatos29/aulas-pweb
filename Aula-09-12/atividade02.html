@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Classificação de Triângulos</h1>
+    <p>Digite os lados do triângulo</p>
+    <input type="number" id="lado1" name="lado1">
+    <input type="number" id="lado2" name="lado2">
+    <input type="number" id="lado3" name="lado3">
+    <input type="button" value="Calcular" onclick="calcular()">
+
+    <div id="res">Resultado...</div>
+
+    <script>
+           function calcular(){
+            var lado1 = window.document.getElementById('lado1');
+            var lado2 = window.document.getElementById('lado2');
+            var lado3 = window.document.getElementById('lado3');
+            var res = window.document.getElementById('res');
+            
+            var l1 = Number(lado1.value);
+            var l2 = Number(lado2.value);
+            var l3 = Number(lado3.value);
+
+            if(l1 < l2 + l3 && l2 < l1 + l3 && l3 < l1 + l2){
+                if(l1 == l2 && l2 == l3){
+                    res.innerHTML = `O triângulo é equilátero.`
+                }
+               
+                else if(l1 == l2 || l1 == l3 || l2 == l3){
+                    res.innerHTML = `O triângulo é isósceles.`
+                }
+        
+                else{
+                    res.innerHTML = `O triângulo é escaleno.`
+                }
+            } else {
+                res.innerHTML = `Os lados fornecidos não formam um triângulo válido.`
+            }
+        }
+  
+    </script>
+</body>
+</html>

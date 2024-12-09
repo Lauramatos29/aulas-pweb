@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calcular Média de Aluno</h1>
+    <p>Informe as duas notas do seu aluno:</p>
+    <input type="number" id="nota1" name="nota1">
+    <input type="number" id="nota2" name="nota2">
+    <input type="button" value="Calcular" onclick="calcular()">
+
+    <div id="res">Resulatdo</div>
+
+    <script>
+        function calcular(){
+            var n1 = window.document.getElementById('nota1')
+            var n2 = window.document.getElementById('nota2')
+            var res = window.document.getElementById('res')
+
+            var num1 = Number(n1.value);
+            var num2 = Number(n2.value);
+
+            var media = (num1+num2)/2;
+
+            res.innerText = `A média do aluno é: ${media}`
+            if (media>=7){
+                res.innerHTML += `<p>O aluno foi aprovado</p>`
+            }
+            else{
+                res.innerHTML += `<p>O aluno foi reprovado</p>`
+            }
+
+        }
+
+    </script>
+</body>
+</html>

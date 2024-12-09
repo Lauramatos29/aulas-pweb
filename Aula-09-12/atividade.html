@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Controle Contábil</h1>
+    <p>Informe o seu salário atual:</p>
+    <input type="number" id="salario" name="salario">
+    <input type="button" value="Calcular" onclick="calcular()">
+
+    <div id="res">Resultado</div>
+
+    <script>
+        function calcular(){
+            var valor = window.document.getElementById('salario');
+            var res = window.document.getElementById('res');
+
+            var val = Number(valor.value);
+
+            if(val<500){
+                var s = val+(val*0.15);
+                res.innerHTML = `O seu novo salário é de: ${s} reais`
+            }
+
+            else if(val>=500 && val<=1000){
+                var s = val +(val*0.10);
+                res.innerHTML = `O seu novo salário é de: ${s} reais `
+            }
+
+            else if(val>1000){
+                var s = val +(val*0.5);
+                res.innerHTML = `O seu novo salário é de: ${s} reais`
+            }
+
+        }
+    </script>
+
+</body>
+</html>
