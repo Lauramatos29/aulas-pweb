@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>
+                <p>Digite o ano de nascimento do paciente:</p>
+                <input type="number" name="anoNasc" id="anoNasc">
+            </p>
+
+            <br>
+
+            <p>
+                <input type="radio" name="sexo" id="mas">
+                <label for="mas">Masculino</label> <br>
+
+                <input type="radio" name="sexo" id="fem"> 
+
+                <label for="fem">Feminino</label> <br>
+
+                <p><input type="button" value="verificar" onclick="verificar()"></p> <br>
+
+            </p>
+
+            <div id="res">
+                Informe os dados para fins de cadastro.
+            </div>
+        </div>
+    </section>
+
+    <div id="foto">
+        <img id="imagem" src="imagem.png">
+
+    </div>
+
+    <footer>
+        <p>&copy;AulaPweb</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
